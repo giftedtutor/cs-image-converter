@@ -93,6 +93,14 @@ input {
   min-width: 0;
 }
 
+.brand-logo {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  border-radius: 0.55rem;
+  display: block;
+}
+
 .brand-mark {
   display: grid;
   place-items: center;
@@ -961,6 +969,12 @@ input {
   font-size: 1.05rem;
   letter-spacing: -0.02em;
   color: var(--ink);
+}
+
+.footer-logo .brand-logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
 }
 
 .footer-logo .brand-mark {

@@ -36,9 +36,8 @@ export function SiteHeader() {
     <header className={`site-header ${open ? "is-menu-open" : ""}`}>
       <div className="header-inner">
         <Link href="/" className="brand" aria-label={`${SITE_NAME} home`} onClick={close}>
-          <span className="brand-mark" aria-hidden>
-            CS
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="" className="brand-logo" width={36} height={36} />
           <span className="brand-text">
             <span className="brand-name">CS Image Converter</span>
             <span className="brand-tag">Private · Instant · Free</span>
