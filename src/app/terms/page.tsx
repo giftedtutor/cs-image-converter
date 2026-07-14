@@ -1,16 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { LegalPage } from "@/components/LegalPage";
 import { OPERATOR_NAME, SITE_NAME, SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
+import { breadcrumbJsonLd, createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Terms of Service",
-  description: `Terms of Service for ${SITE_NAME}. Rules for using the free browser-based image converter.`,
-  alternates: { canonical: "/terms" },
-};
+  description: `Terms of Service for ${SITE_NAME}. Rules for using our free browser-based image converter, advertising, and liability limitations.`,
+  path: "/terms",
+  keywords: [
+    "CS Image Converter terms",
+    "image converter terms of service",
+    "free image converter terms",
+  ],
+});
 
 export default function TermsPage() {
   return (
+    <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Terms of Service", path: "/terms" },
+        ])}
+      />
     <LegalPage title="Terms of Service" updated="July 14, 2026">
       <p>
         These Terms of Service (“Terms”) govern your use of {SITE_NAME} at {SITE_URL}, operated by{" "}
@@ -95,5 +109,6 @@ export default function TermsPage() {
         <Link href="/contact">Contact page</Link>
       </p>
     </LegalPage>
+    </>
   );
 }

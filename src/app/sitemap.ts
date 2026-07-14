@@ -1,26 +1,30 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "@/lib/site";
-
-const siteUrl = SITE_URL;
+import { absoluteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
+
   return [
-    { url: siteUrl, lastModified, changeFrequency: "weekly", priority: 1 },
     {
-      url: `${siteUrl}/privacy`,
+      url: absoluteUrl("/"),
       lastModified,
-      changeFrequency: "monthly",
-      priority: 0.6,
+      changeFrequency: "weekly",
+      priority: 1,
     },
     {
-      url: `${siteUrl}/terms`,
+      url: absoluteUrl("/privacy"),
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: absoluteUrl("/terms"),
       lastModified,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
-      url: `${siteUrl}/contact`,
+      url: absoluteUrl("/contact"),
       lastModified,
       changeFrequency: "monthly",
       priority: 0.6,

@@ -1,16 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { LegalPage } from "@/components/LegalPage";
 import { OPERATOR_NAME, SITE_NAME, SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
+import { breadcrumbJsonLd, createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Privacy Policy",
-  description: `Privacy Policy for ${SITE_NAME}. How we handle data, cookies, analytics, and advertising (including Google AdSense).`,
-  alternates: { canonical: "/privacy" },
-};
+  description: `Privacy Policy for ${SITE_NAME}. Learn how we handle data, cookies, analytics, and Google AdSense advertising. Images are processed locally and never uploaded.`,
+  path: "/privacy",
+  keywords: [
+    "CS Image Converter privacy policy",
+    "image converter privacy",
+    "AdSense privacy policy",
+    "no upload image converter",
+  ],
+});
 
 export default function PrivacyPolicyPage() {
   return (
+    <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Privacy Policy", path: "/privacy" },
+        ])}
+      />
     <LegalPage title="Privacy Policy" updated="July 14, 2026">
       <p>
         This Privacy Policy explains how {SITE_NAME} (“we”, “us”, or “our”), operated by{" "}
@@ -160,5 +175,6 @@ export default function PrivacyPolicyPage() {
         <Link href="/terms">Terms of Service</Link>.
       </p>
     </LegalPage>
+    </>
   );
 }
