@@ -95,7 +95,7 @@ export default function OpenGraphImage() {
               maxWidth: "780px",
             }}
           >
-            PNG · JPEG · WebP · GIF · BMP · AVIF · ICO — resize, rotate, and edit in your browser.
+            PNG · JPEG · WebP · GIF · BMP · AVIF · ICO — resize, rotate, and edit with ease.
           </div>
         </div>
 
@@ -109,8 +109,8 @@ export default function OpenGraphImage() {
             fontWeight: 600,
           }}
         >
-          <span>No uploads · Private by design</span>
-          <span>image-converter.thecodesplitter.com</span>
+          <span>Private · Free · Fast</span>
+          <span>Support: thecodesplitters@gmail.com</span>
         </div>
       </div>
     ),

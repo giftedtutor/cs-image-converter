@@ -7,7 +7,7 @@ import { breadcrumbJsonLd, createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Terms of Service",
-  description: `Terms of Service for ${SITE_NAME}. Rules for using our free browser-based image converter, advertising, and liability limitations.`,
+  description: `Terms of Service for ${SITE_NAME}. Rules for using our free image converter, advertising, and liability limitations.`,
   path: "/terms",
   keywords: [
     "CS Image Converter terms",
@@ -33,9 +33,9 @@ export default function TermsPage() {
 
       <h2>1. The Service</h2>
       <p>
-        {SITE_NAME} provides free, browser-based tools to convert, resize, and edit images. Image
-        processing runs on your device. We may display advertisements (including Google AdSense) to
-        support the Service.
+        {SITE_NAME} provides free tools to convert, resize, and edit images. Advertising (including
+        Google AdSense) may appear to support the Service. For help, email{" "}
+        <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
       </p>
 
       <h2>2. Acceptable use</h2>

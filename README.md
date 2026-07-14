@@ -1,6 +1,8 @@
 # CS Image Converter
 
-Free browser-based image converter, resizer, and editor by Code Splitters.
+Free image converter, resizer, and editor.
+
+Support: thecodesplitters@gmail.com
 
 ## Features
 
@@ -10,7 +12,7 @@ Free browser-based image converter, resizer, and editor by Code Splitters.
 - Filters: grayscale, sepia, invert
 - Side-by-side original vs converted preview
 - Batch convert multiple images
-- 100% client-side — images never leave your device
+- Privacy-focused conversion on your device
 
 ## Develop
 

@@ -16,7 +16,7 @@ const FEATURES = [
   },
   {
     title: "Private by design",
-    body: "Pixels stay on your device. Conversion runs entirely in the browser—nothing is uploaded.",
+    body: "Your images stay on your device. Nothing is sent away for conversion—open, convert, and download with peace of mind.",
   },
 ];
 
@@ -25,7 +25,7 @@ export function FeaturesSection() {
     <section className="features" id="features" aria-labelledby="features-heading">
       <h2 id="features-heading">Built for the whole workflow</h2>
       <p className="section-lead">
-        One quiet workspace for conversion, resizing, and finishing—without leaving the tab.
+        One simple workspace for conversion, resizing, and finishing—right where you need it.
       </p>
       <ul className="feature-list">
         {FEATURES.map((f) => (
@@ -52,7 +52,7 @@ export function FormatsSection() {
     <section className="formats" id="formats" aria-labelledby="formats-heading">
       <h2 id="formats-heading">Formats that matter</h2>
       <p className="section-lead">
-        Drop almost any image browsers can open. Export to the destination format you need.
+        Start with nearly any common image type. Export to the format you need in a few clicks.
       </p>
       <div className="format-table" role="table" aria-label="Supported conversions">
         <div className="format-row format-row--head" role="row">
@@ -75,12 +75,13 @@ export function PrivacySection() {
     <section className="privacy" id="privacy" aria-labelledby="privacy-heading">
       <h2 id="privacy-heading">Your images stay yours</h2>
       <p>
-        CS Image Converter never sends your files to a server. Decoding, resizing, filters, and
-        re-encoding all happen locally with the Canvas API. Close the tab and the data is gone.
+        CS Image Converter is built for privacy. Your files are handled on your device for
+        conversion and editing—we don’t require an account, and your pictures aren’t stored with
+        us. Close the tab when you’re done and you’re finished.
       </p>
       <p>
-        For advertising cookies, analytics, and your rights under privacy law, read the full{" "}
-        <Link href="/privacy">Privacy Policy</Link>. Support:{" "}
+        For cookies, advertising, and your rights under privacy law, read the full{" "}
+        <Link href="/privacy">Privacy Policy</Link>. Need help? Email{" "}
         <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
       </p>
     </section>

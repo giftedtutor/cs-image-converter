@@ -96,7 +96,7 @@ export function UploadZone({
             PNG · JPEG · WebP · GIF · BMP · AVIF · SVG — or click to browse
           </p>
           <span className="upload-cta">Upload image</span>
-          <p className="upload-privacy">Private · stays in your browser</p>
+          <p className="upload-privacy">Private · your files stay with you</p>
         </>
       ) : (
         <>

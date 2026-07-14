@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: SITE_NAME,
     short_name: SITE_SHORT_NAME,
     description:
-      "Convert, resize, and edit images privately in your browser. PNG, JPEG, WebP, GIF, and more.",
+      "Convert, resize, and edit images privately. PNG, JPEG, WebP, GIF, and more. Support: thecodesplitters@gmail.com",
     start_url: "/",
     display: "standalone",
     background_color: "#f4f8f5",

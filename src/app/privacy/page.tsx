@@ -35,14 +35,16 @@ export default function PrivacyPolicyPage() {
 
       <h2>1. Summary</h2>
       <p>
-        Image conversion, resizing, and editing run entirely in your browser. We do not upload,
-        store, or have access to the image files you process with the tool.
+        When you use the converter, image conversion and editing are handled on your own device.
+        We do not ask you to create an account for the core tool, and we do not receive or store
+        the picture files you convert. For support, contact{" "}
+        <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
       </p>
 
       <h2>2. Information we do not collect from the converter</h2>
       <ul>
-        <li>Your uploaded or converted image files</li>
-        <li>Image contents, EXIF, or derived previews from the converter</li>
+        <li>Your original or converted image files</li>
+        <li>Image contents or previews from your conversion session</li>
         <li>Accounts, passwords, or payment details for using the core tool</li>
       </ul>
 
@@ -127,10 +129,10 @@ export default function PrivacyPolicyPage() {
 
       <h2>9. Data retention</h2>
       <p>
-        Images processed in the converter are not stored on our servers. Emails and related
-        correspondence may be retained as needed to respond and for legitimate business records.
-        Server logs and advertising/analytics data retention are controlled by the relevant
-        providers.
+        Picture files you convert are not stored by us. Emails you send to{" "}
+        <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> (and related replies) may be kept
+        as needed to respond and for ordinary business records. Server logs and
+        advertising/analytics data retention follow the policies of those providers.
       </p>
 
       <h2>10. International transfers</h2>

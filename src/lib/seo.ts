@@ -8,7 +8,7 @@ import {
 } from "@/lib/site";
 
 export const SITE_DESCRIPTION =
-  "Free online image converter by Code Splitters. Convert PNG, JPEG, WebP, GIF, BMP, AVIF & ICO in your browser. Resize, rotate, compress, and edit privately—no upload required.";
+  "Free online image converter. Convert PNG, JPEG, WebP, GIF, BMP, AVIF & ICO. Resize, rotate, compress, and edit privately—no account required. Support: thecodesplitters@gmail.com";
 
 export const SITE_KEYWORDS = [
   "CS Image Converter",
@@ -163,7 +163,7 @@ export function webAppJsonLd() {
     applicationCategory: "MultimediaApplication",
     applicationSubCategory: "ImageConverter",
     operatingSystem: "Any",
-    browserRequirements: "Requires HTML5 Canvas and JavaScript",
+    browserRequirements: "Modern web browser with JavaScript enabled",
     offers: {
       "@type": "Offer",
       price: "0",
@@ -177,7 +177,7 @@ export function webAppJsonLd() {
       "Brightness, contrast, saturation, hue, blur",
       "Grayscale, sepia, invert filters",
       "Batch convert multiple images",
-      "Client-side private processing",
+      "Private on-device conversion",
     ],
     provider: { "@id": `${SITE_URL}/#organization` },
     isAccessibleForFree: true,
@@ -195,15 +195,15 @@ export function faqJsonLd() {
         name: `Is ${SITE_NAME} free?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Yes. ${SITE_NAME} is completely free to use with no account and no file uploads.`,
+          text: `Yes. ${SITE_NAME} is free to use with no account required. For help, email thecodesplitters@gmail.com.`,
         },
       },
       {
         "@type": "Question",
-        name: "Are my images uploaded to a server?",
+        name: "Are my images stored or shared?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. All conversion and editing happens locally in your browser. Your images never leave your device.",
+          text: "No. Your images stay on your device while you convert and edit. We do not keep your picture files.",
         },
       },
       {
@@ -211,7 +211,7 @@ export function faqJsonLd() {
         name: "Which image formats can I convert?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "You can convert between PNG, JPEG, WebP, GIF, BMP, AVIF, and ICO. The tool can open most formats browsers can decode, including SVG.",
+          text: "You can convert between PNG, JPEG, WebP, GIF, BMP, AVIF, and ICO, and open many common image types including SVG.",
         },
       },
       {
@@ -224,10 +224,10 @@ export function faqJsonLd() {
       },
       {
         "@type": "Question",
-        name: "Does CS Image Converter work on mobile?",
+        name: "How do I contact support?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. The converter is fully responsive and works on phones, tablets, and desktop browsers.",
+          text: "Email thecodesplitters@gmail.com for product help, privacy requests, or advertising questions.",
         },
       },
     ],
@@ -251,13 +251,13 @@ export function howToJsonLd() {
     "@type": "HowTo",
     name: `How to convert an image with ${SITE_NAME}`,
     description:
-      "Convert any image format in your browser privately with CS Image Converter.",
+      "Convert any image format privately with CS Image Converter.",
     totalTime: "PT1M",
     step: [
       {
         "@type": "HowToStep",
-        name: "Upload an image",
-        text: "Drop an image into the upload area or click to browse your files.",
+        name: "Choose an image",
+        text: "Drop an image into the converter or click to browse your files.",
       },
       {
         "@type": "HowToStep",

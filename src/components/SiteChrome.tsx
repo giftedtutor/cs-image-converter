@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { OPERATOR_NAME, SITE_NAME, SUPPORT_EMAIL } from "@/lib/site";
+import { SITE_NAME, SUPPORT_EMAIL } from "@/lib/site";
 import { SiteHeader } from "./SiteHeader";
 
 export { SiteHeader };
@@ -25,8 +25,8 @@ export function SiteFooter() {
             <span>{SITE_NAME}</span>
           </Link>
           <p className="footer-copy">
-            Professional browser-based image conversion, resize, and editing. Your files stay on
-            your device—never uploaded.
+            Convert, resize, and polish images with privacy in mind. Need help? Reach us at{" "}
+            <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
           </p>
         </div>
 
@@ -51,11 +51,11 @@ export function SiteFooter() {
 
           <div className="footer-col">
             <h2 className="footer-heading">Support</h2>
-            <p className="footer-support-label">Email</p>
+            <p className="footer-support-label">Email us anytime</p>
             <a className="footer-email" href={`mailto:${SUPPORT_EMAIL}`}>
               {SUPPORT_EMAIL}
             </a>
-            <p className="footer-operator">Operated by {OPERATOR_NAME}</p>
+            <p className="footer-operator">We’re happy to help with product or privacy questions.</p>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@ export function SiteFooter() {
           © {year} {SITE_NAME}. All rights reserved.
         </p>
         <p className="footer-legal footer-legal--quiet">
-          Built for creators who value privacy and speed.
+          Support: {SUPPORT_EMAIL}
         </p>
       </div>
     </footer>

@@ -18,6 +18,7 @@ import {
   type ProcessOptions,
 } from "@/lib/image-processor";
 import { UploadZone } from "./UploadZone";
+import { SUPPORT_EMAIL } from "@/lib/site";
 
 type ImageItem = {
   id: string;
@@ -277,7 +278,7 @@ export function ImageWorkspace() {
 
         <div className="hero-inner">
           <div className="hero-copy">
-            <p className="hero-eyebrow">Browser-native image studio</p>
+            <p className="hero-eyebrow">Online image studio</p>
             <h1 id="hero-brand" className="hero-brand">
               <span className="hero-brand-cs">CS</span>
               <span className="hero-brand-rest">Image Converter</span>
@@ -308,7 +309,10 @@ export function ImageWorkspace() {
         <section className="workspace" aria-labelledby="workspace-heading">
           <div className="workspace-intro">
             <h2 id="workspace-heading">Convert &amp; refine</h2>
-            <p>All processing happens in your browser. Your images never leave this device.</p>
+            <p>
+              Adjust format, size, and look, then download. Questions?{" "}
+              <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
+            </p>
           </div>
 
           <div className="workspace-grid">

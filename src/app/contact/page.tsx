@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { LegalPage } from "@/components/LegalPage";
-import { OPERATOR_NAME, SITE_NAME, SUPPORT_EMAIL, SITE_URL } from "@/lib/site";
+import { SITE_NAME, SUPPORT_EMAIL, SITE_URL } from "@/lib/site";
 import { absoluteUrl, breadcrumbJsonLd, createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -12,7 +12,6 @@ export const metadata: Metadata = createPageMetadata({
   keywords: [
     "CS Image Converter contact",
     "image converter support",
-    "Code Splitters contact",
     SUPPORT_EMAIL,
   ],
 });
@@ -34,17 +33,17 @@ export default function ContactPage() {
             description: `Support and inquiries for ${SITE_NAME}.`,
             mainEntity: {
               "@type": "Organization",
-              name: OPERATOR_NAME,
+              name: SITE_NAME,
               email: SUPPORT_EMAIL,
               url: SITE_URL,
             },
           },
         ]}
       />
-      <LegalPage title="Contact" updated="July 14, 2026">
+      <LegalPage title="Contact" updated="July 15, 2026">
         <p>
-          We’d like to hear from you. For support, privacy requests, advertising / AdSense questions,
-          copyright notices, or general feedback, email:
+          We’re here to help. For product support, privacy requests, advertising questions, or
+          general feedback, email:
         </p>
         <p className="contact-email">
           <a href={`mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(`${SITE_NAME} support`)}`}>
@@ -52,18 +51,18 @@ export default function ContactPage() {
           </a>
         </p>
         <p>
-          Operator: {OPERATOR_NAME}
-          <br />
           Product: {SITE_NAME}
+          <br />
+          Support email: {SUPPORT_EMAIL}
         </p>
         <h2>What to include</h2>
         <ul>
-          <li>A clear subject line (e.g. “Privacy request”, “AdSense / ads”, “Bug report”)</li>
-          <li>Your browser and device if reporting a technical issue</li>
-          <li>Screenshots when helpful (do not include private image content unless necessary)</li>
+          <li>A clear subject line (for example: “Privacy request”, “Ads”, or “Bug report”)</li>
+          <li>Your device type if you’re reporting a problem</li>
+          <li>Screenshots when helpful (please avoid private image content unless necessary)</li>
         </ul>
         <p>
-          We aim to respond within a few business days. Related policies:{" "}
+          We aim to reply within a few business days. Related policies:{" "}
           <Link href="/privacy">Privacy Policy</Link> · <Link href="/terms">Terms of Service</Link>
         </p>
       </LegalPage>
