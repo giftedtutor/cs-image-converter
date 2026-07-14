@@ -273,11 +273,7 @@ export function ImageWorkspace() {
         aria-labelledby="hero-brand"
         id="converter"
       >
-        <div className="hero-atmosphere" aria-hidden>
-          <div className="hero-grid" />
-          <div className="hero-glow hero-glow--a" />
-          <div className="hero-glow hero-glow--b" />
-        </div>
+        <div className="hero-atmosphere" aria-hidden />
 
         <div className="hero-inner">
           <div className="hero-copy">

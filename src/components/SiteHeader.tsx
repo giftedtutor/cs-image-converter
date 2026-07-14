@@ -1,7 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { MobileNav } from "@/components/MobileNav";
 import { SITE_NAME } from "@/lib/site";
 
 const NAV = [
@@ -13,31 +11,19 @@ const NAV = [
 ] as const;
 
 export function SiteHeader() {
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
-
-  useEffect(() => {
-    const onResize = () => {
-      if (window.innerWidth > 860) setOpen(false);
-    };
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, []);
-
-  const close = () => setOpen(false);
-
   return (
-    <header className={`site-header ${open ? "is-menu-open" : ""}`}>
+    <header className="site-header">
       <div className="header-inner">
-        <Link href="/" className="brand" aria-label={`${SITE_NAME} home`} onClick={close}>
+        <Link href="/" className="brand" aria-label={`${SITE_NAME} home`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="" className="brand-logo" width={36} height={36} />
+          <img
+            src="/logo.svg"
+            alt=""
+            className="brand-logo"
+            width={36}
+            height={36}
+            decoding="async"
+          />
           <span className="brand-text">
             <span className="brand-name">CS Image Converter</span>
             <span className="brand-tag">Private · Instant · Free</span>
@@ -55,38 +41,7 @@ export function SiteHeader() {
           </Link>
         </nav>
 
-        <button
-          type="button"
-          className={`nav-toggle ${open ? "is-open" : ""}`}
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-      </div>
-
-      <div
-        id="mobile-nav"
-        className={`mobile-nav ${open ? "is-open" : ""}`}
-        aria-hidden={!open}
-      >
-        <nav aria-label="Mobile">
-          {NAV.map((item) => (
-            <Link key={item.href} href={item.href} onClick={close} tabIndex={open ? 0 : -1}>
-              {item.label}
-            </Link>
-          ))}
-          <Link href="/terms" onClick={close} tabIndex={open ? 0 : -1}>
-            Terms of Service
-          </Link>
-          <Link href="/#converter" className="mobile-cta" onClick={close} tabIndex={open ? 0 : -1}>
-            Convert image
-          </Link>
-        </nav>
+        <MobileNav items={NAV} />
       </div>
     </header>
   );

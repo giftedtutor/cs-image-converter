@@ -13,7 +13,15 @@ export function SiteFooter() {
         <div className="footer-brand-block">
           <Link href="/" className="footer-logo">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.svg" alt="" className="brand-logo" width={32} height={32} />
+            <img
+              src="/logo.svg"
+              alt=""
+              className="brand-logo"
+              width={32}
+              height={32}
+              loading="lazy"
+              decoding="async"
+            />
             <span>{SITE_NAME}</span>
           </Link>
           <p className="footer-copy">
