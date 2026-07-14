@@ -23,4 +23,4 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Environment
 
-Optional: set `NEXT_PUBLIC_SITE_URL` for canonical URLs, Open Graph, sitemap, and robots (defaults to `https://csimageconverter.com`).
+Optional: set `NEXT_PUBLIC_SITE_URL` for canonical URLs, Open Graph, sitemap, and robots (defaults to `https://image-converter.thecodesplitter.com`).
